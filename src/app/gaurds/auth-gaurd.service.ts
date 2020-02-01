@@ -8,16 +8,13 @@ import { UserService } from '../services/user.service';
 })
 export class AuthGaurd implements CanActivate {
 
-  constructor(private userService: UserService,
-    private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     if (!this.userService.checkSession()) {
-      console.log('IF');
       return true;
     } else {
-      console.log('ELSE');
-      this.router.navigate(['']);
+      this.router.navigate(['/app/dashboard']);
     }
   }
 }

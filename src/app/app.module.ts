@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './routes/app-routing.module';
 import { OnboardComponent } from './layout/onboard/onboard.component';
 import { OnboardModule } from './modules/onboard/onboard.module';
+import { AdminModule } from './layout/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OnboardModule } from './modules/onboard/onboard.module';
     BrowserModule,
     CommonModule,
     OnboardModule,
+    AdminModule,
     AppRoutingModule
   ],
   providers: [],
